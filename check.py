@@ -17,4 +17,5 @@ if __name__ == '__main__':
             if request.lower() == 'exit':
                 break
 
-            print('Время: ' + time.ctime(float(sock.recv(count_read).decode())))
+            print(f'Реальное время: {time.ctime()}')
+            print(f'Время на сервере: {time.ctime(float(sock.recv(count_read).decode()))}')
